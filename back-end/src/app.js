@@ -1,11 +1,28 @@
+/**
+ * .TODO APP
+ *
+ * Configuration Section
+ *
+ * Update the MongoDB connection string to match your database.
+ *
+ * If you're running the application locally, use the following connection string:
+ *   mongodb://localhost:27017/todo-app
+ */
+
+const PORT = process.env.PORT || 3000;
+const mongoDbConnectionString =
+  "mongodb+srv://19281459495115214763:ZkO4clmKesS8ABwD@todos.0napx.mongodb.net/?retryWrites=true&w=majority&appName=todos";
+
+/**
+ * Application
+ *
+ */
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const todoController = require("./controllers/todo-controller");
 const cors = require("cors");
 const app = express();
-const PORT = process.env.PORT || 3000;
-
 /**
  * Middleware
  *
@@ -18,10 +35,7 @@ app.use(cors());
  *
  */
 mongoose
-  .connect(
-    "mongodb+srv://19281459495115214763:ZkO4clmKesS8ABwD@todos.0napx.mongodb.net/?retryWrites=true&w=majority&appName=todos",
-    {}
-  )
+  .connect(mongoDbConnectionString, {})
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
 

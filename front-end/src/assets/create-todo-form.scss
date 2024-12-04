@@ -1,0 +1,51 @@
+.todo-input-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+
+.todo-input {
+  padding: 12px;
+  width: 100%;
+  max-width: 300px;
+  border: 2px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+.todo-input:focus {
+  border-color: #4caf50;
+}
+
+.add-todo-btn {
+  padding: 12px 20px;
+  background-color: #4caf50;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.3s ease;
+  display: inline-block;
+}
+
+.add-todo-btn:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+.add-todo-btn:hover:not(:disabled) {
+  background-color: #45a049;
+  transform: scale(1.05);
+}
+
+.add-todo-btn:active:not(:disabled) {
+  transform: scale(1);
+}

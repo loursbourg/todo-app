@@ -18,7 +18,10 @@ app.use(cors());
  *
  */
 mongoose
-  .connect("mongodb://localhost:27017/todo-app", {})
+  .connect(
+    "mongodb+srv://19281459495115214763:ZkO4clmKesS8ABwD@todos.0napx.mongodb.net/?retryWrites=true&w=majority&appName=todos",
+    {}
+  )
   .then(() => console.log("Connected to MongoDB"))
   .catch((err) => console.error("MongoDB connection error:", err));
 

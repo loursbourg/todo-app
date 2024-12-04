@@ -6,7 +6,17 @@
   margin-top: 20px;
   margin-bottom: 30px;
 }
-
+.result-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  .status-container {
+    min-width: 440px;
+  }
+}
 .todo-input {
   padding: 12px;
   width: 100%;

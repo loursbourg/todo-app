@@ -1,5 +1,5 @@
 const Todo = require("../models/todo");
-const { TodoResource } = require("../resources/todo");
+const TodoResource = require("../resources/todo");
 
 /**
  * Store a new Todo

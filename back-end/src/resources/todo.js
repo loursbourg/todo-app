@@ -1,4 +1,4 @@
-export class TodoResource {
+class TodoResource {
   constructor(todo) {
     this.id = todo._id;
     this.title = todo.title;
@@ -7,3 +7,5 @@ export class TodoResource {
     this.updated_at = todo.updated_at;
   }
 }
+
+module.exports = TodoResource;
